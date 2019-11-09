@@ -1,6 +1,10 @@
 <?php
 session_start();
+require 'inc/data/products.php';
+require 'inc/head.php';
+
 if (isset($_GET['add_to_cart'])) {
+    echo '<strong style="font-size: 4em; color: green">cookies ajoutés!</strong>';
     $cookie_name = 'Cart';
     if(empty($_COOKIE['Cart'])) {
         $cookie_value = $_GET['add_to_cart'];
@@ -12,11 +16,8 @@ if (isset($_GET['add_to_cart'])) {
 }
 
 
-
-
 ?>
-<?php require 'inc/data/products.php'; ?>
-<?php require 'inc/head.php'; ?>
+
 <section class="cookies container-fluid">
     <div class="row">
         <?php foreach ($catalog as $id => $cookie) { ?>
