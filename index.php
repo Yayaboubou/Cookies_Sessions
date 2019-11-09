@@ -4,7 +4,7 @@ require 'inc/data/products.php';
 require 'inc/head.php';
 
 if (isset($_GET['add_to_cart'])) {
-    echo '<strong style="font-size: 4em; color: green">cookies ajoutés!</strong>';
+    echo '<strong style="font-size: 20px; color: green">Cookies added in your cart !</strong>';
     $cookie_name = 'Cart';
     if(empty($_COOKIE['Cart'])) {
         $cookie_value = $_GET['add_to_cart'];
