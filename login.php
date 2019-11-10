@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+// La page login.php devient inaccessible une fois l’utilisateur connecté. Ce dernier est redirigé vers la page index.php s'il tente d'y accéder.
 if(!empty($_POST['loginname']))
 {
     $_SESSION['loginname'] = $_POST['loginname'];

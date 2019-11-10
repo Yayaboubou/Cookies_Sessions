@@ -39,16 +39,19 @@
                     <li><a href="logout.php">Log out</a></li>
                     <?php else : ;?>
                         <li><a href="login.php">Log in</a></li>
-                    <?php endif ;?>
+                    <?php endif ; ?>
+
                     <li><a href="#">Chocolates chips</a></li>
                     <li><a href="#">Nuts</a></li>
                     <li><a href="#">Gluten full</a></li>
+                    <?php if(isset($_SESSION['loginname'])): ;?>
                     <li>
                         <a href="/cart.php" class="btn btn-warning navbar-btn">
                             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                             Cart
                         </a>
                     </li>
+                    <?php endif ;?>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
